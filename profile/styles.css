@@ -1,0 +1,232 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 80px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.brand>a{
+    text-decoration: none;
+    color: white;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#ermsg {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Header Styles */
+header {
+    position: fixed; /* Fix header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-items {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Adjust for smaller screens */
+        font-size: 14px;
+    }
+    
+    header {
+        padding: 0.5rem;
+        border-bottom-width: 0.1rem;
+        box-shadow: none;
+    }
+    
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0.5em;
+        padding: 0.5em;
+    }
+    
+    nav .brand {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .nav-items.active {
+        display: flex;
+    }
+    
+    .nav-items a {
+        padding: 0.5em;
+        border-radius: 0.4em;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        position: relative;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .nav-items a:hover {
+        background-color: #f8f8f8;
+        color: #00698f;
+    }
+    
+    .nav-items a:active {
+        transform: scale(0.95);
+    }
+    
+    .nav-items a:focus {
+        outline: dashed 2px #ccc;
+    }
+    
+    .nav-items a::after {
+        content: '';
+        position: absolute;
+        bottom: -0.3em;
+        left: 0.8em;
+        right: 0.8em;
+        height: 0.3em;
+        border-bottom-left-radius: 0.4em;
+        border-bottom-right-radius: 0.4em;
+        background-color: #00698f;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    
+    .nav-items a:hover::after {
+        transform: translateX(100%);
+    }
+    
+    .nav-items a:active::after {
+        transform: translateX(-10%);
+    }
+    
+    .nav-items a:focus::after {
+        outline: dashed 2px #ccc;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 50px; /* Adjust padding for very small screens */
+    }
+    
+    header {
+        padding-top: 0.2em;
+    }
+    
+    nav {
+        padding-top: 0.2em;
+    }
+    
+    nav a {
+        padding-top: 0.4em;
+    }
+    
+    nav a:hover {
+        background-color: #f8f8f8;
+    }
+    
+    nav a:focus {
+        outline: dashed;
+    }
+    
+    nav a:focus:not(:focus-visible) {
+        outline: none;
+    }
+    
+    nav a::after {
+        bottom: -0.1em;
+    }
+}

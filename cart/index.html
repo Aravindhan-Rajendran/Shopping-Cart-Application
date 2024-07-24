@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="brand">
+      <a href="../shop/index.html">MeShop.</a>
+    </div>
+    <div class="nav-items">
+      <a href="../home.html">Home</a>
+      <a href="../login.html">Login</a>
+      <a href="../index.html">Signup</a>
+      <a href="../cart/index.html">My Cart</a>
+      <a href="../profile/index.html">Profile</a>
+    </div>
+  </nav>
+  <main>
+    <h1>My Cart</h1>
+    <section class="items-section">
+      <div class="items" id="cart-items"></div>
+    </section>
+    <aside>
+      <section>
+        <h2>Checkout List</h2>
+        <ol id="checkout-list">
+          <!-- Checkout items will be populated here by JavaScript -->
+        </ol>
+        <div id="total-section">
+          <hr style="width: 100%;height:5px;background-color: white;border: 1px solid black;margin: auto;">
+          <p id="total-value" style="margin-top: 10px;">Total: $0.00</p>
+          <hr style="width: 100%;height:5px;background-color: white;border: 1px solid black;margin: auto;">
+          <button type="button" id="checkout-btn">Click To Checkout</button>
+        </div>
+      </section>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

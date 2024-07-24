@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <a href="../shop/index.html">Shopping Cart</a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <div class="nav-items" id="nav-items">
+                <a href="../home.html">Home</a>
+                <a href="../login.html">Login</a>
+                <a href="../index.html">Signup</a>
+                <a href="../cart/index.html">My Cart</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Profile</h1>
+        <form id="profile-form">
+            <div class="input-group">
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" placeholder="First Name" disabled>
+                <button type="button" id="edit-fname">Edit</button>
+            </div>
+            <div class="input-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" placeholder="Last Name" disabled>
+                <button type="button" id="edit-lname">Edit</button>
+            </div>
+            <div>
+                <h2>My Password</h2>
+            </div>
+            <div>
+                <input type="password" id="old-password" placeholder="Old Password">
+            </div>
+            <div>
+                <input type="password" id="new-password" placeholder="New Password">
+            </div>
+            <div>
+                <input type="password" id="confirm-password" placeholder="Confirm Password">
+            </div>
+            <div>
+                <button type="button" id="savei">Save</button>
+                <button type="button" id="logout">Logout</button>
+                <p id="ermsg"></p>
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            document.getElementById('nav-items').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
