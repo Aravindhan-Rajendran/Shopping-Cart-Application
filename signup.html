@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <a href="./shop/index.html">MeShop.</a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <div class="nav-items">
+                <a href="./index.html">Home</a>
+                <a href="./login.html">Login</a>
+                <a href="./signup.html">Signup</a>
+                <a href="./cart/index.html">My Cart</a>
+            </div>
+        </nav>
+    </header>
+    <h1>Sign Up</h1>
+    <div class="form-container">
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirm" placeholder="Confirm Password">
+        <button id="signup">Sign Up</button>
+    </div>
+    <p id="error"></p>
+    <p id="success"></p>
+    <script src="./script.js"></script>
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            document.querySelector('.nav-items').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
