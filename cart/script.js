@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalValueElement = document.getElementById('total-value');
     const checkoutBtn = document.getElementById('checkout-btn');
 
-    // Check if products are already in localStorage
     let products = localStorage.getItem("products");
     if (products) {
         products = JSON.parse(products);
@@ -23,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function displayProducts(cartItems) {
-        cartItemsContainer.innerHTML = ''; // Clear previous items
-        checkoutList.innerHTML = ''; // Clear checkout list
+        cartItemsContainer.innerHTML = '';
+        checkoutList.innerHTML = '';
         let totalValue = 0;
 
         cartItems.forEach((cartItem, index) => {
@@ -77,9 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     displayProducts(cart);
 
     checkoutBtn.addEventListener('click', () => {
-        const totalValue = localStorage.getItem('total'); // Retrieve the total value
+        const totalValue = localStorage.getItem('total');
         alert(`Total amount to pay: $${totalValue}`);
-        window.location.href="../razorpay.index.html";
-        // Implement the checkout functionality here
+        window.location.href = "../razorpay/index.html"; // Redirect to Razorpay page
     });
 });
